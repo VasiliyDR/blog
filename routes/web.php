@@ -21,3 +21,7 @@ use App\Http\Controllers\ContactController;
 Route::get('/', function (){
     return 'Hello world!';
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
