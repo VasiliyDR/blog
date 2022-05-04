@@ -1,0 +1,41 @@
+# Maki template version: 1.0
+
+version: '3.2'
+
+volumes:
+  db-data:
+
+services:
+  frontend:
+    container_name: frontendBlog
+    build:
+      context: .
+      dockerfile: .deploy/docker/frontend/Dockerfile
+    volumes:
+      - ./.deploy/docker/frontend/nginx.conf:/etc/nginx/conf.d/default.conf
+      - .:/app
+    depends_on:
+      - backend
+    ports:
+      - 8000:80
+
+  backend:
+    container_name: backendBlog
+    build:
+      context: .
+      dockerfile: .deploy/docker/backend/Dockerfile
+    env_file:
+        - ./.env
+    volumes:
+      - .:/app
+
+
+  db:
+    container_name: dbBlog
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: blogProject
+    volumes:
+      - db-data:/var/lib/postgresql/data
