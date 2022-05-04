@@ -1,10 +1,8 @@
 <?php
-use App\Models\Page;
+
+
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\MainController;
-use App\Http\Controllers\AboutController;
-use App\Http\Controllers\ContactController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,11 +15,10 @@ use App\Http\Controllers\ContactController;
 */
 
 
-
-Route::get('/', function (){
-    return 'Hello world!';
+Route::group(['namespace' => 'App\Http\Controllers\Main'], function () {
+    Route::get('/',  IndexController::class );
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
