@@ -42,7 +42,8 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Название</th>
+                                    <th>Имя пользователя</th>
+                                    <th>Email</th>
                                     <th colspan="3" class="text-center">Действия</th>
                                 </tr>
                                 </thead>
@@ -50,7 +51,8 @@
                                 @foreach($users as $user)
                                 <tr>
                                     <td>{{ $user->id }}</td>
-                                    <td>{{ $user->title }}</td>
+                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->email }}</td>
                                     <td class="text-center"><a href="{{ route('admin.user.show', $user->id) }}"><i class="far fa-eye"></i></a></td>
                                     <td class="text-center"><a href="{{ route('admin.user.edit', $user->id) }}" class="text-success"><i class="fas fa-pencil-alt"></i></a></td>
                                     <td class="text-center">

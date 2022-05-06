@@ -7,6 +7,8 @@ volumes:
 
 services:
   frontend:
+      user:
+        1000:1000
     container_name: frontendBlog
     build:
       context: .
