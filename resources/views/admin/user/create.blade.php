@@ -59,13 +59,6 @@
                                 @enderror
                             </div>
 
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="password" placeholder="Пароль">
-                                @error('password')
-                                <div class="text-danger">{{ $message }}</div>
-                                @enderror
-                            </div>
-
                             <input type="submit" class="btn btn-primary" value="Добавить">
                         </form>
                     </div>
