@@ -73,7 +73,7 @@
                 </div>
             </div>
             <!-- /.row -->
-        </div><!-- /.container-fluid -->
+        <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
 </div>

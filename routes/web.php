@@ -20,8 +20,8 @@ Route::group(['namespace' => 'App\Http\Controllers\Main'], function () {
 });
 
 
-//, 'middleware' => ['auth', 'verified']
-Route::group(['namespace' => 'App\Http\Controllers\Personal', 'prefix' => 'personal'], function() {
+
+Route::group(['namespace' => 'App\Http\Controllers\Personal', 'prefix' => 'personal', 'middleware' => ['auth']], function() {
 
     Route::group(['namespace' => 'Main', 'prefix' => 'main'], function () {
         Route::get('/', IndexController::class)->name('personal.main.index');
@@ -29,6 +29,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Personal', 'prefix' => 'perso
 
     Route::group(['namespace' => 'Liked', 'prefix' => 'likeds'], function () {
         Route::get('/', IndexController::class)->name('personal.liked.index');
+        Route::delete('/{post}', DeleteController::class)->name('personal.liked.delete');
     });
 
     Route::group(['namespace' => 'Comment', 'prefix' => 'comments'], function () {
