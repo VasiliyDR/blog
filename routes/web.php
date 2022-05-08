@@ -40,7 +40,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Personal', 'prefix' => 'perso
     });
 });
 
-Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin', 'middleware' => ['auth', 'admin', 'verified']], function() {
+Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin', 'middleware' => ['auth', 'admin']], function() {
     Route::group(['namespace' => 'Main'], function () {
         Route::get('/',  IndexController::class )->name('admin.main.index');
     });
