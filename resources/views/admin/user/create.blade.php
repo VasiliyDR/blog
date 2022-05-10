@@ -1,5 +1,7 @@
 @extends('admin.layouts.main')
 
+@section('title', 'Добавления пользователя')
+
 @section('content')
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">

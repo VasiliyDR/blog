@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Carbon\Carbon;
+use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 
@@ -29,4 +30,6 @@ class AppServiceProvider extends ServiceProvider
         Paginator::useBootstrap();
         Carbon::setLocale('ru_RU');
     }
+
+
 }

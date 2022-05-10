@@ -16,6 +16,8 @@ class User extends Authenticatable implements MustVerifyEmail
 
     const ROLE_ADMIN = 0;
     const ROLE_READER = 1;
+    protected $withCount = ['comments'];
+
 
     public static function getRoles() {
         return [
@@ -55,6 +57,9 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+
 
     public function sendEmailVerificationNotification()
     {

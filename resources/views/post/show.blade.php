@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-lg-9 mx-auto">
                     <section class="py-3">
-                        @auth() 
+                        @auth()
                         <form action="{{ route('post.like.store', $post->id) }}" method="post">
                             @csrf
                             <span>{{ $post->liked_users_count }}</span>
@@ -59,7 +59,7 @@
 
                         <h2 class="section-title mb-5" data-aos="fade-up">Комментарии ({{ $post->comments->count() }})</h2>
                         @foreach($post->comments as $comment)
-                            <div class="comment-text bg-primary mb-2 p-3 rounded">
+                            <div class="comment-text border mb-2 p-3 rounded">
                                 <span class="username">
                                   <div>{{ $comment->user->name }}</div>
                                   <span class="text-muted float-right">{{ $comment->getDataCarbon()->diffForHumans() }}</span>

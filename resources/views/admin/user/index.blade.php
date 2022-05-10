@@ -1,5 +1,7 @@
 @extends('admin.layouts.main')
 
+@section('title', 'Список пользователей')
+
 @section('content')
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -44,6 +46,7 @@
                                     <th>ID</th>
                                     <th>Имя пользователя</th>
                                     <th>Email</th>
+                                    <th>Роль</th>
                                     <th colspan="3" class="text-center">Действия</th>
                                 </tr>
                                 </thead>
@@ -53,6 +56,7 @@
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
+                                    <td>{{ $user->role }}</td>
                                     <td class="text-center"><a href="{{ route('admin.user.show', $user->id) }}"><i class="far fa-eye"></i></a></td>
                                     <td class="text-center"><a href="{{ route('admin.user.edit', $user->id) }}" class="text-success"><i class="fas fa-pencil-alt"></i></a></td>
                                     <td class="text-center">

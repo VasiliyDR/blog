@@ -35,6 +35,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Название</th>
+                                    <th>Дата</th>
                                     <th colspan="2" class="text-center">Действия</th>
                                 </tr>
                                 </thead>
@@ -43,6 +44,7 @@
                                     <tr>
                                         <td>{{ $comment->id }}</td>
                                         <td>{{ $comment->message }}</td>
+                                        <td>{{ $comment->created_at }}</td>
                                         <td class="text-center"><a href="{{ route('personal.comment.edit', $comment->id) }}" class="text-success"><i class="fas fa-pencil-alt"></i></a></td>
 
                                         <td class="text-center">
