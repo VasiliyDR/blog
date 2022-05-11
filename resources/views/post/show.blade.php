@@ -76,12 +76,12 @@
                                 <div class="row">
                                     <div class="form-group col-12" data-aos="fade-up">
                                         <label for="comment" class="sr-only">Comment</label>
-                                        <textarea name="message" id="comment" class="form-control" placeholder="Комментарий" rows="10"></textarea>
+                                        <textarea name="message" id="comment" class="form-control border rounded" placeholder="Комментарий" rows="10"></textarea>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12" data-aos="fade-up">
-                                        <input type="submit" value="Отправить комментарий" class="btn btn-warning">
+                                        <input type="submit" value="Отправить комментарий" class="btn btn-success">
                                     </div>
                                 </div>
                             </form>
@@ -92,3 +92,4 @@
         </div>
     </main>
 @endsection
+

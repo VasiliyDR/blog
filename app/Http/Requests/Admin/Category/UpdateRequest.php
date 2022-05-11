@@ -21,10 +21,21 @@ class UpdateRequest extends FormRequest
      *
      * @return array
      */
+
     public function rules()
     {
         return [
             'title' => 'required|string',
+            'preview_image' => 'required|file',
+        ];
+    }
+    public function messages()
+    {
+        return [
+            'title.required' => 'Это поле необходимо для заполнения',
+            'title.string' => 'Данные должны соответствовать сторочному типу',
+            'preview_image.required' => 'Это поле необходимо для заполнения',
+            'preview_image.file' => 'Необходимо выбрать файл',
         ];
     }
 }

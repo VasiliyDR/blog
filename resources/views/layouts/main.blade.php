@@ -15,10 +15,11 @@
 <body>
 
 <header class="edica-header bg-dark">
+    @include('cookieConsent::index')
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="{{ route('main.index') }}"><img style="width: 80px; height: 2@csrf;"
-                                                                          src="{{ asset('assets/images/svgForBlog.svg') }}"
+            <a class="navbar-brand" href="{{ route('main.index') }}"><img style="width: 100px;"
+                                                                          src="{{ asset('assets/images/blogPicture3.svg') }}"
                                                                           alt="Blog"></a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#edicaMainNav"
                     aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,6 +61,7 @@
     </div>
 </header>
 
+
 @yield('content')
 
 <section class="edica-footer-banner-section">
@@ -73,8 +75,6 @@
                     Google Play
                 </button>
             </div>
-            <p class="banner-text">Add some helper text here to explain the finer details of your <br> product or
-                service.</p>
         </div>
     </div>
 </section>
@@ -83,35 +83,25 @@
         <div class="row footer-widget-area">
             <div class="col-md-3">
                 <a href="index.html" class="footer-brand-wrapper">
-                    <img src="{{ asset('assets/images/svgForBlog.svg') }}" alt="edica logo">
+                    <img src="{{ asset('assets/images/blogPicture3.svg') }}" alt="edica logo">
                 </a>
-                <p class="contact-details">blogAboutLife@gmail.com</p>
-                <p class="contact-details">+23 3000 000 00</p>
-                <nav class="footer-social-links">
-                    <a href="#!"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#!"><i class="fab fa-twitter"></i></a>
-                    <a href="#!"><i class="fab fa-behance"></i></a>
-                    <a href="#!"><i class="fab fa-dribbble"></i></a>
-                </nav>
+                <p class="contact-details">Blog@gmail.com</p>
+                <p class="contact-details">+7(499)777-77-77</p>
             </div>
             <div class="col-md-3">
                 <nav class="footer-nav">
-                    <a href="#!" class="nav-link">Company</a>
                     <a href="#!" class="nav-link">Android App</a>
-                    <a href="#!" class="nav-link">ios App</a>
-                    <a href="#!" class="nav-link">Blog</a>
-                    <a href="#!" class="nav-link">Partners</a>
-                    <a href="#!" class="nav-link">Careers</a>
+                    <a href="#!" class="nav-link">Apple App</a>
+                    <a href="#!" class="nav-link">O блоге</a>
+                    <a href="#!" class="nav-link">Партнеры</a>
                 </nav>
             </div>
             <div class="col-md-3">
                 <nav class="footer-nav">
                     <a href="#!" class="nav-link">FAQ</a>
-                    <a href="#!" class="nav-link">Reporting</a>
                     <a href="#!" class="nav-link">Block Storage</a>
                     <a href="#!" class="nav-link">Tools & Integrations</a>
                     <a href="#!" class="nav-link">API</a>
-                    <a href="#!" class="nav-link">Pricing</a>
                 </nav>
             </div>
 
