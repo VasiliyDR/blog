@@ -106,7 +106,7 @@
             </div>
 
         </div>
-        <div class="footer-bottom-content">
+        <div class="footer-bottom-content justify-content-center font-weight-bold">
             <p class="mb-0">© Blog. 2022</p>
         </div>
     </div>
