@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title')</title>
+    <link type="image/png" sizes="32x32" rel="icon" href="{{ asset('assets/images/iconsForTitle/icons8-services-32.png') }}">
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"

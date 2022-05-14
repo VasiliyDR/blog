@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
+    <link type="image/png" sizes="32x32" rel="icon" href="{{ asset('assets/images/iconsForTitle/icons8-document-color-hand-drawn-32.png') }}">
     <link rel="stylesheet" href=" {{ asset('assets/vendors/flag-icon-css/css/flag-icon.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendors/font-awesome/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendors/aos/aos.css') }}">
@@ -13,14 +14,11 @@
     <script src="{{ asset('assets/js/loader.js') }}"></script>
 </head>
 <body>
-
-<header class="edica-header bg-dark">
+<header>
     @include('cookieConsent::index')
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="{{ route('main.index') }}"><img style="width: 100px;"
-                                                                          src="{{ asset('assets/images/blogPicture3.svg') }}"
-                                                                          alt="Blog"></a>
+    <nav class="edica-header navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ route('main.index') }}">BLOG</a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#edicaMainNav"
                     aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -33,6 +31,12 @@
 
                     <li class="nav-item active">
                         <a class="nav-link text-white" href="{{ route('category.index') }}">Категории</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="#">Контакты</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="№">Предложения</a>
                     </li>
 
 
@@ -57,8 +61,8 @@
 
                 </ul>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
 </header>
 
 
@@ -82,11 +86,7 @@
     <div class="container">
         <div class="row footer-widget-area">
             <div class="col-md-3">
-                <a href="index.html" class="footer-brand-wrapper">
-                    <img src="{{ asset('assets/images/blogPicture3.svg') }}" alt="edica logo">
-                </a>
                 <p class="contact-details">Blog@gmail.com</p>
-                <p class="contact-details">+7(499)777-77-77</p>
             </div>
             <div class="col-md-3">
                 <nav class="footer-nav">

@@ -4,8 +4,14 @@
 
 @section('content')
 <main class="blog">
+    @auth()
+            <p class="text-center mt-2 font-weight-bold">Добро пожаловать, {{ auth()->user()->name }}!</p>
+    @endauth
+    @guest()
+            <p class="text-center mt-2 font-weight-bold">Добро пожаловать!</p>
+    @endguest
     <div class="container">
-        <h1 class="edica-page-title" data-aos="fade-up">Блог</h1>
+        <h1 class="edica-page-title" data-aos="fade-up">Посты</h1>
         <section class="featured-posts-section">
             <div class="row">
                 @foreach($posts as $post)
@@ -68,7 +74,6 @@
                 </section>
             </div>
             <div class="col-md-4 sidebar" data-aos="fade-left">
-
                 <div class="widget widget-post-list border rounded p-3">
                     <h5 class="widget-title">Популярные посты</h5>
                     <ul class="post-list">

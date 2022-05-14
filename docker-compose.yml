@@ -4,6 +4,7 @@ version: '3.2'
 
 volumes:
   db-data:
+  etc-letsencrypt:
 
 services:
   frontend:
@@ -39,3 +40,14 @@ services:
       POSTGRES_DB: blogProject
     volumes:
       - db-data:/var/lib/postgresql/data
+
+
+#  certbot:
+#      image: certbot/certbot
+#      container_name: certbot
+#      volumes:
+#          - etc-letsencrypt:/etc/letsencrypt
+#          - .:/app
+#      depends_on:
+#          - frontend
+#      command: certonly --webroot --webroot-path=/app --email sammy@example.com --agree-tos --no-eff-email --staging -d example.com  -d www.example.com
