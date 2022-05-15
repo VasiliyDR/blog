@@ -36,7 +36,7 @@
                         <a class="nav-link text-white" href="#">Контакты</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link text-white" href="№">Предложения</a>
+                        <a class="nav-link text-white" href="#">Предложения</a>
                     </li>
 
 

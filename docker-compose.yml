@@ -15,6 +15,7 @@ services:
     volumes:
       - ./.deploy/docker/frontend/nginx.conf:/etc/nginx/conf.d/default.conf
       - .:/app
+      - etc-letsencrypt:/etc/letsencrypt
     depends_on:
       - backend
     ports:
@@ -42,12 +43,12 @@ services:
       - db-data:/var/lib/postgresql/data
 
 
-#  certbot:
-#      image: certbot/certbot
-#      container_name: certbot
-#      volumes:
-#          - etc-letsencrypt:/etc/letsencrypt
-#          - .:/app
-#      depends_on:
-#          - frontend
-#      command: certonly --webroot --webroot-path=/app --email sammy@example.com --agree-tos --no-eff-email --staging -d example.com  -d www.example.com
+  certbot:
+      image: certbot/certbot
+      container_name: certbot
+      volumes:
+          - etc-letsencrypt:/etc/letsencrypt
+          - .:/app
+      depends_on:
+          - frontend
+      command: certonly --webroot --webroot-path=/app --email drogovozov96@gmail.com --agree-tos --no-eff-email -d blog-life.ru
