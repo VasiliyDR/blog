@@ -73,7 +73,7 @@
                     </div>
                 </section>
             </div>
-            <div class="col-md-4 sidebar" data-aos="fade-left">
+            <div class="col-md-4 sidebar" data-aos="fade-up">
                 <div class="widget widget-post-list border rounded p-3">
                     <h5 class="widget-title">Популярные посты</h5>
                     <ul class="post-list">

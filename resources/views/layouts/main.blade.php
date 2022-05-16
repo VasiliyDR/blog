@@ -26,7 +26,7 @@
             <div class="collapse navbar-collapse" id="edicaMainNav">
                 <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
                     <li class="nav-item active text-white">
-                        <a class="nav-link text-white" href="{{ route('main.index') }}">Блог</a>
+                        <a class="nav-link text-white" href="{{ route('main.index') }}">Главная</a>
                     </li>
 
                     <li class="nav-item active">
