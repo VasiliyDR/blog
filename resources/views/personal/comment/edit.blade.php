@@ -1,4 +1,5 @@
 @extends('personal.layouts.main')
+@section('title', 'Редактирование комментария')
 
 @section('content')
 <!-- Content Wrapper. Contains page content -->
