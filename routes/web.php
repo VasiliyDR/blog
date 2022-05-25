@@ -107,6 +107,6 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin', 
 
 });
 
-Auth::routes(['verify' => true]);
+Auth::routes();
 
 
